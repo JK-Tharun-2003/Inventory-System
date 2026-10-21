@@ -1,0 +1,16 @@
+{
+  "name": "stockpilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StockPilot - inventory, sales & purchase system (React + ASP.NET Core + MongoDB)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && dotnet restore server",
+    "dev": "concurrently -n api,web -c green,cyan \"dotnet watch run --project server\" \"npm run dev --prefix client\"",
+    "seed": "dotnet run --project server -- --seed",
+    "build": "npm run build --prefix client",
+    "start": "dotnet run --project server -c Release --no-launch-profile"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
