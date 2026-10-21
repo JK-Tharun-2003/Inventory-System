@@ -21,5 +21,5 @@ createRoot(document.getElementById("root")).render(
         </DataProvider>
       </AuthProvider>
     </ToastProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
